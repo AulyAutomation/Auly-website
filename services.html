@@ -161,4 +161,163 @@
     .service-omschrijving {
       font-family: 'Cormorant', serif;
       font-size: 20px;
-      co
+      color: #2a2a2a;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    .usp-lijst {
+      list-style: none;
+      margin-bottom: 40px;
+    }
+
+    .usp-lijst li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Cormorant', serif;
+      font-size: 18px;
+      color: var(--white);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .usp-lijst li:last-child { border-bottom: none; }
+
+    .vinkje {
+      color: var(--green);
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .service-knop {
+      display: inline-block;
+      padding: 14px 40px;
+      border: 1px solid var(--green);
+      color: var(--green);
+      font-family: 'Cormorant SC', serif;
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .service-knop:hover {
+      background: var(--green);
+      color: var(--black);
+    }
+
+    .service-card:last-child .service-knop {
+      border-color: var(--white);
+      color: var(--white);
+    }
+
+    .service-card:last-child .service-knop:hover {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    footer {
+      background: var(--bg);
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    footer p {
+      font-family: 'Cormorant', serif;
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 1.5px;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-balk">
+      <img src="Auly base logo.png" alt="AuLy logo" />
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="visie.html">Vision</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="services-sectie">
+    <h2 class="sectie-titel">Our Services</h2>
+    <div class="services-grid">
+
+      <!-- STARTER -->
+      <div class="service-card">
+        <div class="service-header">
+          <h3>Starter</h3>
+          <span class="service-prijs">€ 185</span>
+        </div>
+        <div class="service-divider"></div>
+        <p class="service-omschrijving">Your first step towards automation. A client fills in the form — a professional reply lands in their inbox automatically.</p>
+        <ul class="usp-lijst">
+          <li><span class="vinkje">✔</span> Custom contact form</li>
+          <li><span class="vinkje">✔</span> Automatic reply email</li>
+          <li><span class="vinkje">✔</span> Branded email template</li>
+          <li><span class="vinkje">✔</span> One-time setup, no monthly costs</li>
+          <li><span class="vinkje">✔</span> 30-day support</li>
+        </ul>
+        <a href="contact.html" class="service-knop">Get Started</a>
+      </div>
+
+      <!-- BOOKING -->
+      <div class="service-card">
+        <div class="service-header">
+          <h3>Booking</h3>
+          <span class="service-prijs">€ 185</span>
+        </div>
+        <div class="service-divider"></div>
+        <p class="service-omschrijving">Let your clients come to you. A smart booking system that lets clients schedule their own appointment — directly in your calendar.</p>
+        <ul class="usp-lijst">
+          <li><span class="vinkje">✔</span> Calendly booking system</li>
+          <li><span class="vinkje">✔</span> Synced with your calendar</li>
+          <li><span class="vinkje">✔</span> No back-and-forth scheduling</li>
+          <li><span class="vinkje">✔</span> One-time setup, no monthly costs</li>
+          <li><span class="vinkje">✔</span> 30-day support</li>
+        </ul>
+        <a href="contact.html" class="service-knop">Get Started</a>
+      </div>
+
+      <!-- COMPLETE -->
+      <div class="service-card">
+        <div class="service-header">
+          <h3>Complete</h3>
+          <span class="service-prijs">€ 299</span>
+        </div>
+        <div class="service-divider"></div>
+        <p class="service-omschrijving">The full experience. Your client fills in the form, receives an automatic reply, and books their own appointment — all without you lifting a finger.</p>
+        <ul class="usp-lijst">
+          <li><span class="vinkje">✔</span> Custom contact form</li>
+          <li><span class="vinkje">✔</span> Automatic reply email</li>
+          <li><span class="vinkje">✔</span> Calendly booking system</li>
+          <li><span class="vinkje">✔</span> Fully connected workflow</li>
+          <li><span class="vinkje">✔</span> One-time setup, no monthly costs</li>
+          <li><span class="vinkje">✔</span> 60-day support</li>
+        </ul>
+        <a href="contact.html" class="service-knop">Get Started</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 AuLy · info@auly.ink</p>
+  </footer>
+
+</body>
+</html>
