@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AuLy – Vision</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #232323;
+      --black: #000000;
+      --green: #00d09e;
+      --white: #ffffff;
+      --card: #5f5f61;
+      --card-featured: #99a8a5;
+      --text-muted: #6b6b6b;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--bg);
+      font-family: 'Cormorant SC', serif;
+      color: var(--white);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    header {
+      width: 100%;
+      background-color: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .logo-balk {
+      width: 100%;
+      background-color: var(--bg);
+      padding: 0;
+      margin: 0;
+      line-height: 0;
+    }
+    .logo-balk img {
+      width: 100%;
+      height: 100px;
+      object-fit: fill;
+      display: block;
+    }
+    nav {
+      width: 100%;
+      height: 50px;
+      background-color: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 60px;
+    }
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-family: 'Cormorant SC', serif;
+      font-size: 15px;
+      letter-spacing: 2.5px;
+      font-weight: 400;
+      margin-left: 50px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--green);
+      transition: width 0.3s ease;
+    }
+    nav a:hover { color: var(--green); }
+    nav a:hover::after { width: 100%; }
+
+    .visie-sectie {
+      padding: 100px 60px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .sectie-titel {
+      font-family: 'Cormorant SC', serif;
+      font-size: 13px;
+      letter-spacing: 4px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 50px;
+      text-align: center;
+      opacity: 0;
+      animation: fadeUp 1s ease 0.2s forwards;
+    }
+
+    .visie-intro {
+      font-family: 'Cormorant', serif;
+      font-style: italic;
+      font-size: clamp(22px, 3vw, 36px);
+      color: var(--green);
+      line-height: 1.6;
+      margin-bottom: 60px;
+      text-align: center;
+      opacity: 0;
+      animation: fadeUp 1s ease 0.4s forwards;
+    }
+
+    .visie-blok {
+      background: var(--card);
+      border: 1px solid var(--green);
+      border-radius: 12px;
+      padding: 50px 60px;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.6s forwards;
+    }
+
+    .visie-blok p {
+      font-family: 'Cormorant', serif;
+      font-size: 20px;
+      color: var(--white);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .visie-blok p:last-child { margin-bottom: 0; }
+
+    .visie-blok p strong {
+      color: var(--green);
+      font-family: 'Cormorant SC', serif;
+      font-style: normal;
+    }
+
+    .doelgroep-blok {
+      background: var(--card-featured);
+      border: 1px solid var(--white);
+      border-radius: 12px;
+      padding: 50px 60px;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.8s forwards;
+    }
+
+    .doelgroep-blok h3 {
+      font-family: 'Cormorant SC', serif;
+      font-size: 13px;
+      letter-spacing: 4px;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .doelgroep-lijst {
+      list-style: none;
+    }
+
+    .doelgroep-lijst li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: 'Cormorant', serif;
+      font-size: 20px;
+      color: var(--white);
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .doelgroep-lijst li:last-child { border-bottom: none; }
+
+    .vinkje {
+      color: var(--green);
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .visie-cta {
+      text-align: center;
+      padding: 20px 0 60px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 1s forwards;
+    }
+
+    .visie-cta a {
+      display: inline-block;
+      padding: 16px 50px;
+      border: 1px solid var(--green);
+      color: var(--green);
+      font-family: 'Cormorant SC', serif;
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .visie-cta a:hover {
+      background: var(--green);
+      color: var(--black);
+    }
+
+    footer {
+      background: var(--bg);
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    footer p {
+      font-family: 'Cormorant', serif;
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 1.5px;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-balk">
+      <img src="Auly base logo.png" alt="AuLy logo" />
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="visie.html">Vision</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="visie-sectie">
+    <h2 class="sectie-titel">Our Vision</h2>
+
+    <p class="visie-intro">Small businesses deserve the same efficiency as large ones — without the enterprise price tag.</p>
+
+    <div class="visie-blok">
+      <p>Running a business is demanding — especially when you're doing it alone or with a small team. Emails get lost. Time disappears in back-and-forth scheduling. Follow-ups slip through the cracks. Not because you don't care, but because there are only so many hours in a day.</p>
+      <p>That's why AuLy does one thing, and does it well. We connect the tools you already use, so your business follows up automatically and clients book their own appointments. <strong>No new platform to learn. No monthly subscription. Just a one-time setup that works from day one.</strong></p>
+      <p><strong>We work for the realtor</strong> who misses leads because enquiries pile up unanswered. For the restaurant owner who loses reservations to a full voicemail. For every small business that deserves to show up professionally — even when they're not at their desk.</p>
+      <p>Your time is your most valuable asset. We help you protect it.</p>
+    </div>
+
+    <div class="doelgroep-blok">
+      <h3>Who we work for</h3>
+      <ul class="doelgroep-lijst">
+        <li><span class="vinkje">✔</span> Realtors missing leads due to slow follow-up</li>
+        <li><span class="vinkje">✔</span> Restaurants losing reservations to a full voicemail</li>
+        <li><span class="vinkje">✔</span> Small businesses ready to work smarter, not harder</li>
+      </ul>
+    </div>
+
+    <div class="visie-cta">
+      <a href="contact.html">Let's get to work</a>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 AuLy · info@auly.ink</p>
+  </footer>
+
+</body>
+</html>
