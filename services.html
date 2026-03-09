@@ -110,6 +110,7 @@
       opacity: 0;
       transform: translateY(30px);
       transition: box-shadow 0.4s ease, transform 0.4s ease;
+      position: relative;
     }
 
     .service-card:nth-child(1) { animation: fadeUp 0.8s ease 0.3s forwards; }
@@ -118,12 +119,27 @@
 
     .service-card:last-child {
       background: var(--card-featured);
-      border-color: var(--white);
+      border: 2px solid var(--green);
     }
 
     .service-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 20px 50px rgba(0, 208, 158, 0.15);
+    }
+
+    .badge {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--green);
+      color: var(--black);
+      font-family: 'Cormorant SC', serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      padding: 6px 24px;
+      border-radius: 20px;
+      white-space: nowrap;
     }
 
     .service-header {
@@ -163,9 +179,29 @@
       font-size: 20px;
       color: #2a2a2a;
       line-height: 1.6;
-      margin-bottom: 30px;
+      margin-bottom: 16px;
       font-style: italic;
     }
+
+    .service-sub {
+      font-family: 'Cormorant', serif;
+      font-size: 16px;
+      color: var(--white);
+      line-height: 1.7;
+      margin-bottom: 30px;
+      opacity: 0.85;
+    }
+
+    .usp-titel {
+      font-family: 'Cormorant SC', serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .service-card:last-child .usp-titel { color: rgba(255,255,255,0.5); }
 
     .usp-lijst {
       list-style: none;
@@ -210,12 +246,13 @@
     }
 
     .service-card:last-child .service-knop {
-      border-color: var(--white);
-      color: var(--white);
+      border-color: var(--black);
+      background: var(--black);
+      color: var(--green);
     }
 
     .service-card:last-child .service-knop:hover {
-      background: var(--white);
+      background: var(--green);
       color: var(--black);
     }
 
@@ -257,57 +294,61 @@
     <h2 class="sectie-titel">Our Services</h2>
     <div class="services-grid">
 
-      <!-- STARTER -->
+      <!-- LEAD RESPONSE SYSTEM -->
       <div class="service-card">
         <div class="service-header">
-          <h3>Starter</h3>
-          <span class="service-prijs">€ 185</span>
+          <h3>Lead Response System</h3>
+          <span class="service-prijs">€ 390</span>
         </div>
         <div class="service-divider"></div>
-        <p class="service-omschrijving">Your first step towards automation. A client fills in the form — a professional reply lands in their inbox automatically.</p>
+        <p class="service-omschrijving">Ensure every new enquiry receives an immediate, professional reply.</p>
+        <p class="service-sub">When a potential client contacts your business, speed matters. This system automatically sends a branded response email confirming the enquiry and guiding the client on the next step.</p>
+        <p class="usp-titel">What's included</p>
         <ul class="usp-lijst">
           <li><span class="vinkje">✔</span> Custom contact form</li>
-          <li><span class="vinkje">✔</span> Automatic reply email</li>
-          <li><span class="vinkje">✔</span> Branded email template</li>
-          <li><span class="vinkje">✔</span> One-time setup, no monthly costs</li>
-          <li><span class="vinkje">✔</span> 30-day support</li>
+          <li><span class="vinkje">✔</span> Automatic branded email response</li>
+          <li><span class="vinkje">✔</span> Enquiry data organised in a secure database</li>
+          <li><span class="vinkje">✔</span> One-time setup, no monthly automation fees</li>
         </ul>
         <a href="contact.html" class="service-knop">Get Started</a>
       </div>
 
-      <!-- BOOKING -->
+      <!-- BOOKING SYSTEM -->
       <div class="service-card">
         <div class="service-header">
-          <h3>Booking</h3>
-          <span class="service-prijs">€ 185</span>
+          <h3>Booking System</h3>
+          <span class="service-prijs">€ 590</span>
         </div>
         <div class="service-divider"></div>
-        <p class="service-omschrijving">Let your clients come to you. A smart booking system that lets clients schedule their own appointment — directly in your calendar.</p>
+        <p class="service-omschrijving">Let clients schedule appointments directly in your calendar.</p>
+        <p class="service-sub">Instead of exchanging multiple emails to find a suitable time, clients can simply choose an available slot and confirm the meeting themselves.</p>
+        <p class="usp-titel">What's included</p>
         <ul class="usp-lijst">
-          <li><span class="vinkje">✔</span> Calendly booking system</li>
-          <li><span class="vinkje">✔</span> Synced with your calendar</li>
-          <li><span class="vinkje">✔</span> No back-and-forth scheduling</li>
-          <li><span class="vinkje">✔</span> One-time setup, no monthly costs</li>
-          <li><span class="vinkje">✔</span> 30-day support</li>
+          <li><span class="vinkje">✔</span> Calendar integration</li>
+          <li><span class="vinkje">✔</span> Client self-booking system</li>
+          <li><span class="vinkje">✔</span> Automatic confirmation emails</li>
+          <li><span class="vinkje">✔</span> Reduced back-and-forth scheduling</li>
         </ul>
         <a href="contact.html" class="service-knop">Get Started</a>
       </div>
 
-      <!-- COMPLETE -->
+      <!-- COMPLETE CLIENT CAPTURE SYSTEM -->
       <div class="service-card">
+        <span class="badge">★ Most Popular</span>
         <div class="service-header">
-          <h3>Complete</h3>
-          <span class="service-prijs">€ 299</span>
+          <h3>Complete Client Capture System</h3>
+          <span class="service-prijs">€ 890</span>
         </div>
         <div class="service-divider"></div>
-        <p class="service-omschrijving">The full experience. Your client fills in the form, receives an automatic reply, and books their own appointment — all without you lifting a finger.</p>
+        <p class="service-omschrijving">A fully automated enquiry and booking workflow.</p>
+        <p class="service-sub">From the moment a client submits an enquiry, the system responds instantly, records the information, and allows the client to schedule an appointment — all automatically.</p>
+        <p class="usp-titel">What's included</p>
         <ul class="usp-lijst">
-          <li><span class="vinkje">✔</span> Custom contact form</li>
-          <li><span class="vinkje">✔</span> Automatic reply email</li>
-          <li><span class="vinkje">✔</span> Calendly booking system</li>
-          <li><span class="vinkje">✔</span> Fully connected workflow</li>
-          <li><span class="vinkje">✔</span> One-time setup, no monthly costs</li>
-          <li><span class="vinkje">✔</span> 60-day support</li>
+          <li><span class="vinkje">✔</span> Custom enquiry form</li>
+          <li><span class="vinkje">✔</span> Automatic response email</li>
+          <li><span class="vinkje">✔</span> Appointment booking integration</li>
+          <li><span class="vinkje">✔</span> Organised client database</li>
+          <li><span class="vinkje">✔</span> Fully configured workflow</li>
         </ul>
         <a href="contact.html" class="service-knop">Get Started</a>
       </div>
