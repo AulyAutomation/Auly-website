@@ -235,6 +235,49 @@
       background: var(--green);
       color: var(--black);
     }
+    .cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 24px 100px;
+}
+
+.btn-filled, .btn-outline {
+  font-family: 'Cormorant SC', serif;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 20px 0;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  display: block;
+  transition: background 0.25s, color 0.25s;
+}
+
+.btn-filled {
+  background: #00d09e;
+  color: #232323;
+  border: 2px solid #00d09e;
+}
+
+.btn-filled:hover {
+  background: transparent;
+  color: #00d09e;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #00d09e;
+  border: 2px solid #00d09e;
+}
+
+.btn-outline:hover {
+  background: #00d09e;
+  color: #232323;
+}
   </style>
 </head>
 <body>
@@ -291,10 +334,10 @@
           <p class="hiw-step-text">All data lands in your Google Sheet. One-time setup. No subscriptions. Ever.</p>
         </div>
         <div
-         <section class="contact-sectie">
-    <h2 class="contact-titel">Get In Touch</h2>
-    <div class="contact-knoppen">
-      <a href="contact.html">Get In Touch</a>
+      <div class="cta-section">
+  <a href="contact.html" class="btn-filled">Contact</a>
+  
+</div>
     </div>
       
   </div>
