@@ -1,0 +1,287 @@
+<!-- ============================================================
+     AuLy — "See How It Works" sectie
+     Plak dit in je bestaande HTML pagina op de gewenste plek.
+     Vervang VIDEO_URL_HIER door jouw uiteindelijke video URL/embed.
+     ============================================================ -->
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;600&family=Cormorant:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+<section class="how-it-works" id="how-it-works">
+  <div class="hiw-inner">
+
+    <!-- Header -->
+    <div class="hiw-header">
+      <span class="hiw-label">In actie</span>
+      <h2 class="hiw-title">See How It Works</h2>
+      <p class="hiw-sub">
+        Watch how AuLy automates your client flow — from first contact to confirmed booking — without any monthly subscriptions or complicated platforms.
+      </p>
+    </div>
+
+    <!-- Video container -->
+    <div class="hiw-video-wrap">
+      <div class="hiw-video-frame">
+
+        <!-- ══════════════════════════════════════════════
+             OPTIE 1: Lokaal video bestand
+             Uncomment en vul je bestandsnaam in:
+        <video controls poster="" preload="metadata">
+          <source src="jouw-video.mp4" type="video/mp4">
+        </video>
+        ══════════════════════════════════════════════ -->
+
+        <!-- ══════════════════════════════════════════════
+             OPTIE 2: YouTube embed
+             Vervang VIDEO_ID door jouw YouTube video ID:
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID?rel=0&color=white"
+          title="AuLy — See How It Works"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        ══════════════════════════════════════════════ -->
+
+        <!-- ══════════════════════════════════════════════
+             OPTIE 3: Loom embed
+             Vervang LOOM_VIDEO_ID door jouw Loom ID:
+        <iframe
+          src="https://www.loom.com/embed/LOOM_VIDEO_ID"
+          title="AuLy — See How It Works"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+        ══════════════════════════════════════════════ -->
+
+        <!-- TIJDELIJK PLACEHOLDER — verwijder dit blok zodra je je video hebt -->
+        <div class="hiw-placeholder">
+          <div class="hiw-play-icon">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="29" stroke="#00d09e" stroke-width="1.5"/>
+              <polygon points="24,18 46,30 24,42" fill="#00d09e"/>
+            </svg>
+          </div>
+          <p class="hiw-placeholder-text">Video coming soon</p>
+        </div>
+        <!-- EINDE PLACEHOLDER -->
+
+      </div>
+
+      <!-- Decoratieve lijn links -->
+      <div class="hiw-deco-line"></div>
+    </div>
+
+    <!-- Drie punten onder de video -->
+    <div class="hiw-steps">
+      <div class="hiw-step">
+        <span class="hiw-step-num">01</span>
+        <h3 class="hiw-step-title">Lead responds automatically</h3>
+        <p class="hiw-step-text">The moment someone fills in your form, a branded email goes out — no manual work needed.</p>
+      </div>
+      <div class="hiw-step">
+        <span class="hiw-step-num">02</span>
+        <h3 class="hiw-step-title">Booking link included</h3>
+        <p class="hiw-step-text">Clients book directly into your calendar via Calendly — instantly, 24/7.</p>
+      </div>
+      <div class="hiw-step">
+        <span class="hiw-step-num">03</span>
+        <h3 class="hiw-step-title">You stay in control</h3>
+        <p class="hiw-step-text">All data lands in your Google Sheet. One-time setup. No subscriptions. Ever.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* ── See How It Works ────────────────────────────────────────── */
+.how-it-works {
+  background: #232323;
+  padding: 100px 24px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtiele achtergrond textuur */
+.how-it-works::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(0,208,158,0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 10% 80%, rgba(0,208,158,0.03) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hiw-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Header */
+.hiw-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hiw-label {
+  display: inline-block;
+  font-family: 'Cormorant SC', serif;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: #00d09e;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hiw-title {
+  font-family: 'Cormorant SC', serif;
+  font-size: clamp(36px, 6vw, 58px);
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0 0 20px;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+
+.hiw-sub {
+  font-family: 'Cormorant', serif;
+  font-size: clamp(16px, 2vw, 19px);
+  font-style: italic;
+  color: rgba(255,255,255,0.55);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Video wrapper */
+.hiw-video-wrap {
+  position: relative;
+  margin-bottom: 72px;
+}
+
+.hiw-video-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  background: #1a1a1a;
+  border: 1px solid rgba(0,208,158,0.2);
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(0,208,158,0.08),
+    0 32px 80px rgba(0,0,0,0.6),
+    0 0 60px rgba(0,208,158,0.05);
+}
+
+.hiw-video-frame video,
+.hiw-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Decoratieve lijn */
+.hiw-deco-line {
+  position: absolute;
+  left: -32px;
+  top: 20px;
+  bottom: 20px;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, #00d09e 40%, #00d09e 60%, transparent);
+  opacity: 0.3;
+}
+
+/* Placeholder (tijdelijk) */
+.hiw-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hiw-play-icon svg {
+  width: 72px;
+  height: 72px;
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.hiw-placeholder:hover .hiw-play-icon svg {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.hiw-placeholder-text {
+  font-family: 'Cormorant SC', serif;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.3);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Drie stappen */
+.hiw-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.hiw-step {
+  position: relative;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.hiw-step-num {
+  display: block;
+  font-family: 'Cormorant SC', serif;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: #00d09e;
+  margin-bottom: 12px;
+}
+
+.hiw-step-title {
+  font-family: 'Cormorant SC', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 10px;
+  letter-spacing: 0.03em;
+}
+
+.hiw-step-text {
+  font-family: 'Cormorant', serif;
+  font-size: 15px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── Mobiel ──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .how-it-works {
+    padding: 72px 20px 88px;
+  }
+
+  .hiw-deco-line {
+    display: none;
+  }
+
+  .hiw-steps {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hiw-header {
+    margin-bottom: 44px;
+  }
+}
+</style>
